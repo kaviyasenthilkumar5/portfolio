@@ -252,7 +252,7 @@
                 </h2>
 
                 <p class="text-lg leading-relaxed text-gray-700 mb-6">
-                    Below are samples of my work demonstrating my attention to detail in test case design and bug reporting.
+                    Below are samples of my work demonstrating my attention to detail in test case design and ticket verification.
                 </p>
 
                 <div class="mb-8 p-6 bg-gray-50 rounded-lg shadow-sm border border-gray-100">
@@ -261,10 +261,9 @@
                         <span>Sample Test Case: Client - Credit Card Functionality</span>
                     </h3>
                     <div class="space-y-2 text-gray-700 mb-4">
-                        <p><span class="highlight-text">Test Case ID:</span> Advisor_Client_E2E0051</p>
+                        <p><span class="highlight-text">Test Case ID:</span> Advisor_Client_E2E005</p>
                         <p><span class="highlight-text">Title:</span> Verify end-to-end functionality for adding client credit cards</p>
                         <p><span class="highlight-text">Module:</span> Client Management - Credit Cards</p>
-                        <p><span class="highlight-text">Test Date:</span> 2024-08-26</p> <!-- Added Test Date -->
                         <p><span class="highlight-text">Preconditions:</span></p>
                         <ul class="list-disc list-inside ml-4 space-y-1">
                             <li class="font-medium">User must sign in to the Fora Advisor Portal.</li>
@@ -280,6 +279,7 @@
                                 <tr>
                                     <th class="py-3 px-4 text-left">Step #</th>
                                     <th class="py-3 px-4 text-left">Action/Description</th>
+                                    <th class="py-3 px-4 text-left">Test Data</th> <!-- Added Test Data Column -->
                                     <th class="py-3 px-4 text-left">Expected Outcome</th>
                                 </tr>
                             </thead>
@@ -287,65 +287,81 @@
                                 <tr>
                                     <td>1</td>
                                     <td>Click on the "Credit Cards" tab on the client detail page.</td>
+                                    <td>N/A</td>
                                     <td>It should navigate to the Credit Card section.</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Click the "Add Card" button.</td>
+                                    <td>N/A</td>
                                     <td>The system should prompt for a two-step verification process.</td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Complete the two-step verification process.</td>
+                                    <td>N/A</td>
                                     <td>The system should display a popup with the credit card entry link.</td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Click the "Add card" button in the popup.</td>
+                                    <td>N/A</td>
                                     <td>Opens "Securely add client’s credit card" popup.</td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Click on the "Copy link" button.</td>
+                                    <td>N/A</td>
                                     <td>The card entry link should be copied to the clipboard with a "Copied!" message.</td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Paste the copied link into a browser and navigate to the URL.</td>
+                                    <td>Copied Link URL</td>
                                     <td>The "Secure Payment Detail Storage" page should open.</td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
-                                    <td>Fill in the required card information and billing address fields:<br>
-                                        <span class="font-normal text-gray-600">"Card Number: '4242424242424242', MM/YY: '12/25', CVC: '123', Cardholder Name: 'Tester', Address: '123 Main St', Apt: 'Apt 4B', City: 'Metropolis', State: 'NY', Zip Code: '10001'"</span>
+                                    <td>Fill in the required card information and billing address fields.</td>
+                                    <td>
+                                        Card Number: '4242424242424242', MM/YY: '12/25', CVC: '123',
+                                        Cardholder Name: 'Tester', Address: '123 Main St', Apt: 'Apt 4B',
+                                        City: 'Metropolis', State: 'NY', Zip Code: '10001'
                                     </td>
                                     <td>All fields should accept valid input without errors.</td>
                                 </tr>
                                 <tr>
                                     <td>8</td>
                                     <td>Click the "Save and add" button.</td>
+                                    <td>N/A</td>
                                     <td>The card details should be securely stored, with a confirmation message stating the card has been saved.</td>
                                 </tr>
                                 <tr>
                                     <td>9</td>
                                     <td>Navigate back to the "Credit Cards" section.</td>
+                                    <td>N/A</td>
                                     <td>The Credit Cards section should display the added card correctly.</td>
                                 </tr>
                                 <tr>
                                     <td>10</td>
                                     <td>Click on the "Add Card" button, then click on the "Enter manually" button.</td>
+                                    <td>N/A</td>
                                     <td>It should open the "Add Payment Card" popup.</td>
                                 </tr>
                                 <tr>
                                     <td>11</td>
-                                    <td>Enter valid details in the required fields and click the "Save and add" button:<br>
-                                        <span class="font-normal text-gray-600">"Card Number: '4242424242424242', MM/YY: '12/25', CVC: '123', Cardholder Name: 'Tester', Address: '123 Main St', Apt: 'Apt 4B', City: 'Metropolis', State: 'NY', Zip Code: '10001'"</span>
+                                    <td>Enter valid details in the required fields and click the "Save and add" button.</td>
+                                    <td>
+                                        Card Number: '4242424242424242', MM/YY: '12/25', CVC: '123',
+                                        Cardholder Name: 'Tester', Address: '123 Main St', Apt: 'Apt 4B',
+                                        City: 'Metropolis', State: 'NY', Zip Code: '10001'
                                     </td>
                                     <td>The credit card details should be saved successfully, with a confirmation message appearing.</td>
                                 </tr>
                                 <tr>
                                     <td>12</td>
                                     <td>Click the "Got it" button on the confirmation popup.</td>
+                                    <td>N/A</td>
                                     <td>The popup should close successfully.</td>
                                 </tr>
                             </tbody>
@@ -354,9 +370,10 @@
                 </div>
 
                 <div class="p-6 bg-gray-50 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center">
-                    <p class="text-lg text-gray-700 mb-4"><span class="highlight-text">Bug Verification:</span> Click the link below to view the detailed bug report and verification video/screenshots:</p>                    <a href="https://jam.dev/c/4a39ddb4-a3b6-480e-b3d8-ec928fa6ef7b" target="_blank" class="bug-verification-link">
+                    <p class="text-lg text-gray-700 mb-4"><span class="highlight-text">Bug Verification:</span> Click the link below to view the screenshots and video evidence for this ticket verification:</p>
+                    <a href="https://jam.dev/c/4a39ddb4-a3b6-480e-b3d8-ec928fa6ef7b" target="_blank" class="bug-verification-link">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
-                        View Bug Verification
+                        View Ticket Verification
                     </a>
                 </div>
             </section>
